@@ -9,7 +9,8 @@
       <form class="mt-8 space-y-6" @submit.prevent="register">
         <div class="rounded-md shadow-sm -space-y-px">
           <div>
-            <input v-model="username" type="text" required class="input-field rounded-t-md" placeholder="Nazwa użytkownika">
+            <input v-model="username" type="text" required class="input-field rounded-t-md"
+                   placeholder="Nazwa użytkownika">
           </div>
           <div>
             <input v-model="email" type="email" required class="input-field" placeholder="Adres e-mail">
@@ -18,7 +19,8 @@
             <input v-model="password" type="password" required class="input-field" placeholder="Hasło">
           </div>
           <div>
-            <input v-model="passwordConfirm" type="password" required class="input-field rounded-b-md" placeholder="Potwierdź hasło">
+            <input v-model="passwordConfirm" type="password" required class="input-field rounded-b-md"
+                   placeholder="Potwierdź hasło">
           </div>
         </div>
         <div>
@@ -41,9 +43,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import {ref} from 'vue';
 import axios from 'axios';
-import { useRouter } from 'vue-router';
+import {useRouter} from 'vue-router';
 
 const username = ref('');
 const email = ref('');
@@ -64,10 +66,10 @@ const register = async () => {
       email: email.value,
       password: password.value,
     });
-    // Po udanej rejestracji, przekieruj na stronę logowania
+
     router.push('/login');
   } catch (err) {
-    // Obsługa błędów z serwera, np. gdy nazwa użytkownika jest zajęta
+
     error.value = 'Rejestracja nie powiodła się. Sprawdź wprowadzone dane.';
     console.error(err.response.data);
   }
@@ -75,10 +77,11 @@ const register = async () => {
 </script>
 
 <style scoped>
-/* Kopiujemy te same style co w Login.vue */
+
 .input-field {
   @apply appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-900 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm;
 }
+
 .submit-button {
   @apply relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-gray-800 transition-colors;
 }

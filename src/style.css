@@ -1,4 +1,10 @@
-/* src/style.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+
+    background-color: #0D1117;
+    background-image: radial-gradient(at 47% 33%, hsl(204, 15%, 25%), transparent 50%),
+    radial-gradient(at 82% 65%, hsl(218, 39%, 25%), transparent 55%);
+}

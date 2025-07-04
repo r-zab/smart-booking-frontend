@@ -39,20 +39,20 @@
       <p v-if="error" class="mt-2 text-center text-sm text-red-500">
         {{ error }}
       </p>
-<p class="mt-4 text-center text-sm text-gray-400">
-  Nie masz konta?
-  <router-link to="/rejestracja" class="font-medium text-indigo-400 hover:text-indigo-300">
-    Zarejestruj się
-  </router-link>
-</p>
+      <p class="mt-4 text-center text-sm text-gray-400">
+        Nie masz konta?
+        <router-link to="/rejestracja" class="font-medium text-indigo-400 hover:text-indigo-300">
+          Zarejestruj się
+        </router-link>
+      </p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import {ref} from 'vue';
 import axios from 'axios';
-import { handleLoginSuccess } from '../auth';
+import {handleLoginSuccess} from '../auth';
 
 const username = ref('');
 const password = ref('');
@@ -74,7 +74,6 @@ const login = async () => {
 </script>
 
 <style scoped>
-/* Używamy @apply aby zgrupować powtarzalne klasy Tailwind dla czytelności */
 .input-field {
   @apply appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-900 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm;
 }
