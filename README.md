@@ -7,9 +7,9 @@
 Nowoczesny interfejs użytkownika typu SPA (Single Page Application) dla systemu SmartBooking. Aplikacja została
 zbudowana przy użyciu Vue.js 3 (Composition API) i w pełni komunikuje się z dedykowanym backendem REST API napisanym w
 Django.
-
-**Link do repozytorium backendu:
-** [smart-booking-system (Django REST API)](https://github.com/r-zab/smart-booking-system)
+---
+**Link do repozytorium backendu:**
+[smart-booking-system (Django REST API)](https://github.com/r-zab/smart-booking-system)
 
 ---
 
